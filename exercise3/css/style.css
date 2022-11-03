@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(46, 182, 175);
+    background-image: url("../images/background.png");
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed; 
+}
+
+p{
+    background-color: black;
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22pt;
+}
+
+a{
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+}
+a:hover 
+{ 
+    background-color: red; 
+    color: blue 
+} 
+a.halloween{
+    color: orange;
+    background-color: black;
+}
+
+a.halloween:hover{
+    background-color: red; 
+    color: blue 
+}
+
+h2{
+    color: red;
+}

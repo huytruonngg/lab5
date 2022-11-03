@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #myElement {
+            border: 2px solid #CCC;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Manipulation</title>
+</head>
+
+<body>
+    <p id="myElement">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae
+        natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
+        doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae
+        natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
+        doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae
+        natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
+        doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae
+        natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
+        doloribus!</p>
+    <form>
+        <h3>Border modification</h3>
+        <label>Red: </label>
+        <input type="text" placeholder="0-255" id="redBorder" name="red"><br><br>
+
+        <label>Green:</label>
+        <input type="text" placeholder="0-255" id="greenBorder" name="green"><br><br>
+
+        <label>Blue:</label>
+        <input type="text" placeholder="0-255" id="blueBorder" name="blue"><br><br>
+
+        <label>Width:</label>
+        <input type="text" placeholder="thin, thick or medium" id="widthBorder" name="width"><br><br>
+
+        <h3>Background color modification</h3>
+        <label>Red: </label>
+        <input type="text" placeholder="0-255" id="redBackground" name="red"><br><br>
+
+        <label>Green:</label>
+        <input type="text" placeholder="0-255" id="greenBackground" name="green"><br><br>
+
+        <label>Blue:</label>
+        <input type="text" placeholder="0-255" id="blueBackground" name="blue"><br><br>
+
+        <button type="button" onclick="myFunc()">Modify</button>
+    </form>
+
+    <script>
+        function myFunc() {
+            //border
+            var redBorder = document.getElementById("redBorder").value;
+            var greenBorder = document.getElementById("greenBorder").value;
+            var blueBorder = document.getElementById("blueBorder").value;
+            var widthBorder = document.getElementById("widthBorder").value;
+
+            var colorBorder = "rgb(" + redBorder + "," + greenBorder + "," + blueBorder + ")";
+
+            //background color
+            var redBackground = document.getElementById("redBackground").value;
+            var greenBackground = document.getElementById("greenBackground").value;
+            var blueBackground = document.getElementById("blueBackground").value;
+
+            var colorBackground = "rgb(" + redBackground + "," + greenBackground + "," + blueBackground + ")";
+
+            var element = document.getElementById("myElement");
+            element.style.borderColor = colorBorder;
+            element.style.borderWidth = String(widthBorder);
+            element.style.backgroundColor = colorBackground;
+        }
+
+    </script>
+</body>
+
+</html>

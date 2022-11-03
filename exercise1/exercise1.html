@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+  </head>
+  <body>
+
+  <h1>Password Validator</h1>
+
+  <form>
+    <label>Password:</label><br><br>
+    <input type="password" id="initPassword" name="initPassword"><br><br>
+    
+    <label>Repeat Password:</label><br><br>
+    <input type="password" id="verifiedPassword" name="verifiedPassword"><br><br>
+    <button type="button" onclick = "myFunc()">Validate</button>
+  </form>
+
+  <script>
+    function myFunc(){
+      var initPassword = document.getElementById("initPassword").value;
+      var verifiedPassword = document.getElementById("verifiedPassword").value;
+      if(initPassword != verifiedPassword){
+          alert("The passwords entered don't match!"); 
+      }
+      if(initPassword.length < 8){
+          alert("The passwords are not at least 8 characters long!"); 
+      }
+    }
+  </script>
+
+  </body>
+</html>
+

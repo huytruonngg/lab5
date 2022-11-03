@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide show!</title>
+</head>
+
+<body>
+    <div class="mySlides">
+        <div class="numbertext">Tokyo</div>
+        <img src="images/tokyo.jpg" height="300" width="500">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">Mexico City</div>
+        <img src="images/mexicocity.jpg" height="300" width="500">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">Sao Paulo</div>
+        <img src="images/saopaulo.jpg" height="300" width="500">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">Shanghai</div>
+        <img src="images/shanghai.jpg" height="300" width="500">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">Delhi</div>
+        <img src="images/delhi.jpg" height="300" width="500">
+    </div>
+
+    <button class="prev" onclick="plusSlides(-1)">previous</button>
+    <button class="next" onclick="plusSlides(1)">next</button>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
